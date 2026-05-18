@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos de configuración y desarrollo
+Disallow: /.git/
+Disallow: /.cpanel.yml
+Disallow: /correciones.md
+Disallow: /indicaciones.md
+Disallow: /contexto.md
+
+# Sitemap
+Sitemap: https://www.agrosumak.com/sitemap.xml

@@ -1,0 +1,12 @@
+# Sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Archivos de planificación interna
+correciones.md
+indicaciones.md
+contexto.md
