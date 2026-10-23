@@ -1,0 +1,25 @@
+{
+  "name": "Agropecuaria Sumak",
+  "short_name": "Sumak",
+  "description": "Corporación pecuaria de excelencia global. Producción, genética y exportación pecuaria premium desde Perú.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/logo/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

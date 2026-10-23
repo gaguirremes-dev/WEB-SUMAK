@@ -8,828 +8,845 @@
     <meta property="og:title" content="Agropecuaria Sumak — Excelencia Pecuaria Global">
     <meta property="og:description" content="Corporación pecuaria integrada verticalmente. Genética, crianza, procesamiento y exportación de estándares mundiales.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="SUMAK.png">
+    <meta property="og:image" content="https://www.agrosumak.com/assets/logo/sumak-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="595">
+    <meta property="og:image:alt" content="Agropecuaria Sumak">
+    <meta property="og:url" content="https://www.agrosumak.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.agrosumak.com/assets/logo/sumak-logo.png">
     <title>Agropecuaria Sumak — Excelencia Pecuaria Global</title>
+
+    <!-- ═══ FAVICON / APP ICONS — logo blanco sobre círculo negro ═══ -->
+    <link rel="icon" href="assets/logo/favicon.ico?v=3" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png?v=3">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/logo/favicon-192.png?v=3">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png?v=3">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#050505">
+    <meta name="msapplication-TileImage" content="assets/logo/favicon-192.png?v=3">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════ LOADER ═══════════════════════════════════ -->
-<div id="loader">
-    <div class="ld-inner">
-        <div class="ld-logo">
-            <span class="ld-s">S</span>
-            <span class="ld-name">SUMAK</span>
-        </div>
-        <div class="ld-progress"><div class="ld-bar" id="ldBar"></div></div>
-        <div class="ld-caption">Iniciando sistema corporativo...</div>
-    </div>
-</div>
+<div class="progress-bar" aria-hidden="true"></div>
 
-<!-- ═══════════════════════════════════ CURSOR ═══════════════════════════════════ -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
-<header id="navbar">
-    <nav class="nav-inner">
-        <a href="#" class="nav-logo">
-            <div class="nl-mark"><img src="SUMAK.png" alt="Sumak Logo" class="nl-logo-img"></div>
-            <div class="nl-text">
-                <span class="nl-name">SUMAK</span>
-                <span class="nl-sub">AGROPECUARIA</span>
-            </div>
+<header class="nav-wrap" id="navbar">
+    <nav class="nav" aria-label="Principal">
+        <a href="#top" class="nav-brand" aria-label="Agropecuaria Sumak — Inicio">
+            <img src="assets/logo/sumak-logo.png" alt="Agropecuaria Sumak" class="nav-brand-img" width="101" height="50">
         </a>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#sobre" class="nm-link">Nosotros</a></li>
-            <li><a href="#produccion" class="nm-link">Producción</a></li>
-            <li><a href="#genetica" class="nm-link">Genética</a></li>
-            <li><a href="#exportacion" class="nm-link">Exportación</a></li>
-            <li><a href="#certificaciones" class="nm-link">Certificaciones</a></li>
-            <li><a href="https://rrhh.agrosumak.com" target="_blank" rel="noopener" class="nm-link">Intranet</a></li>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre" class="nav-link">Nosotros</a></li>
+            <li><a href="#produccion" class="nav-link">Producción</a></li>
+            <li><a href="#genetica" class="nav-link">Genética</a></li>
+            <li><a href="#exportacion" class="nav-link">Exportación</a></li>
+            <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
+            <li><a href="https://rrhh.agrosumak.com" target="_blank" rel="noopener" class="nav-link">Intranet<svg class="ico-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></li>
         </ul>
-        <a href="#b2b" class="nav-b2b">Canal B2B</a>
-        <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+
+        <a href="#b2b" class="btn btn-sm nav-cta">Canal B2B</a>
+
+        <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
             <span></span><span></span><span></span>
         </button>
     </nav>
 </header>
 
-<!-- Mobile menu overlay -->
-<div class="mobile-overlay" id="mobileOverlay">
-    <button class="mo-close" id="moClose">✕</button>
-    <ul class="mo-menu">
-        <li><a href="#sobre">Nosotros</a></li>
-        <li><a href="#produccion">Producción</a></li>
-        <li><a href="#genetica">Genética</a></li>
-        <li><a href="#exportacion">Exportación</a></li>
-        <li><a href="#certificaciones">Certificaciones</a></li>
-        <li><a href="https://rrhh.agrosumak.com" target="_blank" rel="noopener">Intranet</a></li>
-        <li><a href="#b2b" class="mo-cta">Canal B2B</a></li>
-    </ul>
-    <div class="mo-footer">
-        <span>info@agrosumak.com</span>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-panel">
+        <div class="mobile-head">
+            <img src="assets/logo/sumak-logo.png" alt="Agropecuaria Sumak" class="mobile-logo" width="101" height="50">
+            <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="#sobre">Nosotros</a></li>
+            <li><a href="#produccion">Producción</a></li>
+            <li><a href="#genetica">Genética</a></li>
+            <li><a href="#exportacion">Exportación</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="https://rrhh.agrosumak.com" target="_blank" rel="noopener">Intranet</a></li>
+        </ul>
+        <a href="#b2b" class="btn mobile-cta">Solicitar cotización</a>
+        <div class="mobile-foot">info@agrosumak.com</div>
     </div>
 </div>
 
+<main id="contenido">
+
 <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
-<section id="hero">
-    <!-- Background layer -->
-    <div class="hero-bg">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/video/Hero%20Section.mp4" type="video/mp4">
-        </video>
-        <div class="hero-video-overlay"></div>
-        <div class="hbg-orb hbg-orb-1"></div>
-        <div class="hbg-orb hbg-orb-2"></div>
-        <div class="hbg-orb hbg-orb-3"></div>
-        <div class="hbg-grid"></div>
-    </div>
+<section class="hero" id="top">
+    <div class="hero-glow hero-glow-a"></div>
+    <div class="hero-glow hero-glow-b"></div>
 
-    <!-- 3-column asymmetric layout -->
-    <div class="hero-layout">
+    <div class="wrap hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow"><span class="eyebrow-dot"></span>Corporación pecuaria premium — Perú</span>
 
-        <!-- Col A: Thin sidebar with vertical label -->
-        <div class="hero-col-a">
-            <div class="hca-vertical">PRODUCCIÓN PECUARIA GLOBAL</div>
-            <div class="hca-year">
-                <span class="hca-num">25</span>
-                <span class="hca-unit">años</span>
-            </div>
-        </div>
-
-        <!-- Col B: Main content, left-aligned -->
-        <div class="hero-col-b">
-            <div class="hero-badge">
-                <span class="hb-pulse"></span>
-                <span>Corporación Pecuaria Premium — Perú</span>
-            </div>
-            <h1 class="hero-h1">
-                <span class="h1-thin">Producción</span>
-                <span class="h1-bold">Pecuaria</span>
-                <span class="h1-stroke">Global</span>
-                <span class="h1-caption">con Estándares de Excelencia</span>
+            <h1 class="hero-title">
+                Producción pecuaria <span class="grad-text">global</span> con estándares de excelencia
             </h1>
-            <p class="hero-body">
+
+            <p class="lead">
                 Integramos verticalmente la cadena pecuaria completa: desde mejoramiento genético
                 y crianza tecnificada hasta exportación internacional bajo protocolos de bioseguridad
                 de clase mundial.
             </p>
-            <div class="hero-actions">
-                <a href="#produccion" class="cta-primary">
-                    Explorar Operaciones
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+
+            <div class="hero-cta">
+                <a href="#produccion" class="btn">
+                    Explorar operaciones
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="#b2b" class="cta-ghost">Canal Corporativo B2B</a>
+                <a href="#b2b" class="btn btn-ghost">Canal corporativo B2B</a>
             </div>
-            <div class="hero-tags">
-                <span class="ht-item">◆ SENASA</span>
-                <span class="ht-sep">|</span>
-                <span class="ht-item">◆ OMSA</span>
-                <span class="ht-sep">|</span>
-                <span class="ht-item">◆ DIGESA</span>
-                <span class="ht-sep">|</span>
-                <span class="ht-item">◆ BPP</span>
+
+            <div class="hero-trust">
+                <span class="trust-label">Avalados por</span>
+                <ul class="trust-list">
+                    <li>SENASA</li>
+                    <li>OMSA</li>
+                    <li>DIGESA</li>
+                    <li>BPP</li>
+                </ul>
             </div>
         </div>
 
-        <!-- Col C: Visual panel -->
-        <div class="hero-col-c">
-            <div class="hero-panel">
-                <div class="hp-corner hp-tl"></div>
-                <div class="hp-corner hp-tr"></div>
-                <div class="hp-corner hp-bl"></div>
-                <div class="hp-corner hp-br"></div>
-                <div class="hp-rings">
-                    <div class="hpr hpr-1"></div>
-                    <div class="hpr hpr-2"></div>
-                    <div class="hpr hpr-3"></div>
+        <div class="hero-media">
+            <figure class="hero-figure">
+                <img src="assets/img/opt/vacuno-800.webp"
+                     srcset="assets/img/opt/vacuno-800.webp 800w, assets/img/opt/vacuno-1600.webp 1600w"
+                     sizes="(max-width: 1024px) 100vw, 46vw"
+                     alt="Ejemplar de raza pura del hato Sumak" width="800" height="800" fetchpriority="high" decoding="async">
+                <figcaption class="hero-figcaption">
+                    <span class="dot-live"></span>
+                    Operación activa · 24/7
+                </figcaption>
+            </figure>
+
+            <div class="float-card float-card-years">
+                <span class="fc-num">25</span>
+                <span class="fc-label">años de<br>trayectoria</span>
+            </div>
+
+            <div class="float-card float-card-markets">
+                <div class="fcm-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9z"/></svg>
                 </div>
-                <div class="hp-content">
-                    <div class="hp-big-letter">S</div>
-                    <div class="hp-label-main">SUMAK</div>
-                    <div class="hp-label-sub">AGROPECUARIA S.A.C.</div>
-                    <div class="hp-chips">
-                        <span>Vacuno</span>
-                        <span>Porcino</span>
-                        <span>Ovino</span>
-                        <span>Genética</span>
-                        <span>Export</span>
-                    </div>
+                <div>
+                    <strong>12 mercados</strong>
+                    <span>de exportación</span>
                 </div>
-                <div class="hp-scan-line"></div>
             </div>
         </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="hero-scroll">
-        <div class="hs-line"></div>
-        <span>scroll</span>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════ SOBRE SUMAK ═══════════════════════════════════ -->
-<section id="sobre" class="s-about">
-    <div class="sec-num">01</div>
+<!-- ═══════════════════════════════════ KPI STRIP ═══════════════════════════════════ -->
+<section class="kpi-band" aria-label="Indicadores corporativos">
     <div class="wrap">
-        <div class="about-layout">
+        <div class="kpi-grid">
+            <div class="kpi">
+                <span class="kpi-value"><span class="counter" data-target="500">0</span><span class="kpi-plus">+</span></span>
+                <span class="kpi-label">Clientes B2B activos</span>
+            </div>
+            <div class="kpi">
+                <span class="kpi-value"><span class="counter" data-target="12">0</span></span>
+                <span class="kpi-label">Países de exportación</span>
+            </div>
+            <div class="kpi">
+                <span class="kpi-value"><span class="counter" data-target="10000">0</span><span class="kpi-plus">+</span></span>
+                <span class="kpi-label">Toneladas producidas / año</span>
+            </div>
+            <div class="kpi">
+                <span class="kpi-value"><span class="counter" data-target="25">0</span><span class="kpi-plus">+</span></span>
+                <span class="kpi-label">Años de trayectoria</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="about-left">
-                <div class="about-bg-word">SUMAK</div>
-                <div class="sec-label">Sobre Nosotros</div>
-                <h2 class="sec-title">
-                    El Legado<br>
-                    <em class="accent-italic">Sumak</em>
-                </h2>
-                <blockquote class="about-quote">
-                    "Sumak" — quechua: <strong>Excelente, Hermoso, Pleno.</strong>
+<!-- ═══════════════════════════════════ SOBRE NOSOTROS ═══════════════════════════════════ -->
+<section class="section" id="sobre">
+    <div class="wrap">
+        <div class="about-grid">
+            <div class="about-copy">
+                <span class="eyebrow"><span class="eyebrow-dot"></span>01 — Sobre nosotros</span>
+                <h2 class="h2">El legado <span class="grad-text">Sumak</span></h2>
+
+                <blockquote class="quote">
+                    <p>«Sumak» — quechua: <strong>excelente, hermoso, pleno.</strong></p>
                 </blockquote>
-                <div class="about-text">
-                    <p>Agropecuaria Sumak es una corporación de escala global integrada verticalmente en la cadena pecuaria. Dominamos desde el mejoramiento genético y la crianza tecnificada hasta la comercialización y exportación internacional de proteína animal.</p>
-                    <p>Nuestro modelo biocultural fusiona el conocimiento ancestral andino con tecnología agroindustrial de vanguardia, estableciendo estándares de bioseguridad y excelencia operativa en el sector pecuario peruano.</p>
-                </div>
-                <a href="#produccion" class="link-arrow">Ver operaciones <span>→</span></a>
-                <div class="about-real-img">
-                    <img src="assets/img/El%20Legado.jpeg" alt="El Legado Sumak Agropecuaria" loading="lazy">
-                </div>
+
+                <p class="body-text">
+                    Agropecuaria Sumak es una corporación de escala global integrada verticalmente en la
+                    cadena pecuaria. Dominamos desde el mejoramiento genético y la crianza tecnificada hasta
+                    la comercialización y exportación internacional de proteína animal.
+                </p>
+                <p class="body-text">
+                    Nuestro modelo biocultural fusiona el conocimiento ancestral andino con tecnología
+                    agroindustrial de vanguardia, estableciendo estándares de bioseguridad y excelencia
+                    operativa en el sector pecuario peruano.
+                </p>
+
+                <a href="#produccion" class="link-arrow">
+                    Ver operaciones
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
 
-            <div class="about-right">
-                <div class="about-cards">
-                    <div class="acard rv" style="--d:0s">
-                        <div class="acard-num">01</div>
-                        <h3>Misión</h3>
-                        <p>Proveer proteína animal de la más alta calidad desde el origen hasta el mercado global, con trazabilidad absoluta y bioseguridad certificada.</p>
-                        <div class="acard-line"></div>
-                    </div>
-                    <div class="acard rv" style="--d:.1s">
-                        <div class="acard-num">02</div>
-                        <h3>Visión</h3>
-                        <p>Ser la corporación pecuaria de referencia en Latinoamérica, reconocida por excelencia genética, sostenibilidad y liderazgo exportador.</p>
-                        <div class="acard-line"></div>
-                    </div>
-                    <div class="acard rv" style="--d:.2s">
-                        <div class="acard-num">03</div>
-                        <h3>Identidad</h3>
-                        <p>Raíces andinas, operación global. El concepto Sumak como columna vertebral de la máxima excelencia operativa en cada proceso.</p>
-                        <div class="acard-line"></div>
-                    </div>
-                    <div class="acard rv" style="--d:.3s">
-                        <div class="acard-num">04</div>
-                        <h3>Bienestar</h3>
-                        <p>Bienestar animal riguroso, sostenibilidad del entorno natural y nutrición de la más alta calidad y pureza desde las zonas ganaderas del Perú.</p>
-                        <div class="acard-line"></div>
-                    </div>
-                </div>
+            <div class="about-cards">
+                <article class="card value-card">
+                    <span class="value-num">01</span>
+                    <h3>Misión</h3>
+                    <p>Proveer proteína animal de la más alta calidad desde el origen hasta el mercado global, con trazabilidad absoluta y bioseguridad certificada.</p>
+                </article>
+                <article class="card value-card">
+                    <span class="value-num">02</span>
+                    <h3>Visión</h3>
+                    <p>Ser la corporación pecuaria de referencia en Latinoamérica, reconocida por excelencia genética, sostenibilidad y liderazgo exportador.</p>
+                </article>
+                <article class="card value-card">
+                    <span class="value-num">03</span>
+                    <h3>Identidad</h3>
+                    <p>Raíces andinas, operación global. El concepto Sumak como columna vertebral de la máxima excelencia operativa en cada proceso.</p>
+                </article>
+                <article class="card value-card">
+                    <span class="value-num">04</span>
+                    <h3>Bienestar</h3>
+                    <p>Bienestar animal riguroso, sostenibilidad del entorno natural y nutrición de la más alta calidad y pureza desde las zonas ganaderas del Perú.</p>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════ PRODUCCIÓN ═══════════════════════════════════ -->
-<section id="produccion" class="s-production">
-    <div class="sec-num">02</div>
-    <div class="diag-top"></div>
+<section class="section section-alt" id="produccion">
     <div class="wrap">
-        <div class="sec-header-split">
+        <div class="section-head">
             <div>
-                <div class="sec-label">Operaciones Pecuarias</div>
-                <h2 class="sec-title">Producción<br><span class="text-ac">Tecnificada</span></h2>
+                <span class="eyebrow"><span class="eyebrow-dot"></span>02 — Operaciones pecuarias</span>
+                <h2 class="h2">Producción <span class="grad-text">tecnificada</span></h2>
             </div>
-            <p class="sec-header-desc">
-                Centros de producción bajo protocolos de bioseguridad internacional con monitoreo digital en tiempo real y trazabilidad completa de cada animal.
+            <p class="section-lead">
+                Centros de producción bajo protocolos de bioseguridad internacional, con monitoreo digital
+                en tiempo real y trazabilidad completa de cada animal.
             </p>
         </div>
 
-        <!-- Irregular asymmetric grid -->
-        <div class="prod-grid">
-            <div class="pc pc-hero rv" style="--d:0s">
-                <img class="pc-img" src="assets/img/Vacuno.jpeg" alt="Producción Vacuna" loading="lazy">
-                <div class="pc-tag">Ganadería Mayor</div>
-                <div class="pc-num">01</div>
-                <h3>Producción<br>Vacuna</h3>
-                <p>Hatos ganaderos de raza pura y comercial bajo estrictos controles sanitarios automatizados. Razas Angus, Simmental, Brahman y Holstein con trazabilidad RFID completa.</p>
-                <div class="pc-specs">
-                    <span>Trazabilidad RFID</span>
-                    <span>Control Sanitario</span>
-                    <span>Registro Genético</span>
-                </div>
-                <div class="pc-arrow">↗</div>
+        <!-- Selector visual con fotografías -->
+        <div class="selector" role="tablist" aria-label="Áreas de operación" id="prodSelector">
+            <button class="sel-item is-active" role="tab" aria-selected="true" data-target="vacuno">
+                <span class="sel-thumb"><img src="assets/img/opt/vacuno-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">Vacuno</span>
+            </button>
+            <button class="sel-item" role="tab" aria-selected="false" data-target="porcino">
+                <span class="sel-thumb"><img src="assets/img/opt/porcinos-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">Porcino</span>
+            </button>
+            <button class="sel-item" role="tab" aria-selected="false" data-target="ovino">
+                <span class="sel-thumb"><img src="assets/img/opt/ovinos-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">Ovino</span>
+            </button>
+            <button class="sel-item" role="tab" aria-selected="false" data-target="bioseguridad">
+                <span class="sel-thumb"><img src="assets/img/opt/bioseguridad-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">Bioseguridad</span>
+            </button>
+            <button class="sel-item" role="tab" aria-selected="false" data-target="planta">
+                <span class="sel-thumb"><img src="assets/img/opt/planta-beneficio-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">Planta</span>
+            </button>
+            <button class="sel-item" role="tab" aria-selected="false" data-target="horeca">
+                <span class="sel-thumb"><img src="assets/img/opt/canal-horeca-800.webp" alt="" width="800" height="800" loading="lazy" decoding="async"></span>
+                <span class="sel-label">HORECA</span>
+            </button>
+        </div>
+
+        <!-- Panel del selector -->
+        <div class="prod-panel card">
+            <div class="prod-media">
+                <img id="prodImg"
+                     src="assets/img/opt/vacuno-800.webp"
+                     srcset="assets/img/opt/vacuno-800.webp 800w, assets/img/opt/vacuno-1600.webp 1600w"
+                     sizes="(max-width: 900px) 100vw, 48vw"
+                     alt="Producción vacuna" width="800" height="800" decoding="async">
+                <span class="badge badge-glass prod-media-tag" id="prodTag">Ganadería mayor</span>
             </div>
-            <div class="pc rv" style="--d:.1s">
-                <img class="pc-img" src="assets/img/Porcinos.jpeg" alt="Producción Porcina" loading="lazy">
-                <div class="pc-tag">Ganadería Menor</div>
-                <div class="pc-num">02</div>
-                <h3>Producción<br>Porcina</h3>
-                <p>Granjas tecnificadas con alimentación automatizada, ventilación controlada y bioseguridad nivel A.</p>
-                <div class="pc-specs">
-                    <span>Bioseguridad A</span>
-                    <span>Automatización</span>
-                </div>
-                <div class="pc-arrow">↗</div>
+            <div class="prod-body">
+                <h3 class="prod-title" id="prodTitle">Producción vacuna</h3>
+                <p class="prod-text" id="prodText">
+                    Hatos ganaderos de raza pura y comercial bajo estrictos controles sanitarios automatizados.
+                    Razas Angus, Simmental, Brahman y Holstein con trazabilidad RFID completa.
+                </p>
+                <ul class="chip-list" id="prodChips">
+                    <li class="chip">Trazabilidad RFID</li>
+                    <li class="chip">Control sanitario</li>
+                    <li class="chip">Registro genético</li>
+                </ul>
+                <a href="#b2b" class="link-arrow">
+                    Consultar disponibilidad
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
-            <div class="pc rv" style="--d:.2s">
-                <img class="pc-img" src="assets/img/Ovinos.jpeg" alt="Producción Ovina" loading="lazy">
-                <div class="pc-tag">Ganadería Menor</div>
-                <div class="pc-num">03</div>
-                <h3>Producción<br>Ovina</h3>
-                <p>Rebaños de alta calidad para producción de carne y lana fina con manejo extensivo e intensivo supervisado.</p>
-                <div class="pc-specs">
-                    <span>Pastoreo Rotacional</span>
-                    <span>Lana Premium</span>
-                </div>
-                <div class="pc-arrow">↗</div>
+        </div>
+
+        <!-- Tabla técnica con cabecera oscura -->
+        <div class="table-card">
+            <div class="table-head">
+                <h3>Ficha técnica de operaciones</h3>
+                <span class="badge badge-soft">Actualizado 2026</span>
             </div>
-            <div class="pc pc-accent rv" style="--d:.3s">
-                <img class="pc-img" src="assets/img/Bioseguridad.jpeg" alt="Bioseguridad Certificada" loading="lazy">
-                <div class="pc-tag">Infraestructura</div>
-                <div class="pc-num">04</div>
-                <h3>Bioseguridad<br>Certificada</h3>
-                <p>Protocolos de bioseguridad internacional con filtración de aire, barreras sanitarias y monitoreo IoT 24/7.</p>
-                <div class="pc-specs">
-                    <span>IoT 24/7</span>
-                    <span>SENASA</span>
-                    <span>OMSA</span>
-                </div>
-                <div class="pc-arrow">↗</div>
-            </div>
-            <div class="pc rv" style="--d:.4s">
-                <img class="pc-img" src="assets/img/Planta%20de%20Beneficio.jpeg" alt="Planta de Beneficio" loading="lazy">
-                <div class="pc-tag">Procesamiento</div>
-                <div class="pc-num">05</div>
-                <h3>Planta de<br>Beneficio</h3>
-                <p>Beneficio, maduración y desposte con cadena de frío controlada por sensores TI y empaque al vacío.</p>
-                <div class="pc-specs">
-                    <span>Cadena de Frío</span>
-                    <span>Vacío</span>
-                </div>
-                <div class="pc-arrow">↗</div>
-            </div>
-            <div class="pc rv" style="--d:.5s">
-                <img class="pc-img" src="assets/img/Canal%20HORECA.jpeg" alt="Canal HORECA" loading="lazy">
-                <div class="pc-tag">Distribución</div>
-                <div class="pc-num">06</div>
-                <h3>Canal<br>HORECA</h3>
-                <p>Suministro de alta capacidad para supermercados, hoteles, restaurantes e industrias procesadoras nacionales.</p>
-                <div class="pc-specs">
-                    <span>Entrega Oportuna</span>
-                    <span>Volumen Industrial</span>
-                </div>
-                <div class="pc-arrow">↗</div>
+            <div class="table-scroll">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Unidad operativa</th>
+                            <th>Capacidad</th>
+                            <th>Estándar</th>
+                            <th>Certificación</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Unidad operativa">Producción vacuna</td>
+                            <td data-label="Capacidad">4 200 cabezas</td>
+                            <td data-label="Estándar">Trazabilidad RFID</td>
+                            <td data-label="Certificación">SENASA</td>
+                            <td data-label="Estado"><span class="badge badge-green">Operativo</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Unidad operativa">Producción porcina</td>
+                            <td data-label="Capacidad">12 000 cabezas</td>
+                            <td data-label="Estándar">Bioseguridad nivel A</td>
+                            <td data-label="Certificación">SENASA · DIGESA</td>
+                            <td data-label="Estado"><span class="badge badge-green">Operativo</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Unidad operativa">Producción ovina</td>
+                            <td data-label="Capacidad">3 500 cabezas</td>
+                            <td data-label="Estándar">Pastoreo rotacional</td>
+                            <td data-label="Certificación">SENASA</td>
+                            <td data-label="Estado"><span class="badge badge-green">Operativo</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Unidad operativa">Planta de beneficio</td>
+                            <td data-label="Capacidad">10 000 t / año</td>
+                            <td data-label="Estándar">HACCP · ISO 22000</td>
+                            <td data-label="Certificación">DIGESA</td>
+                            <td data-label="Estado"><span class="badge badge-blue">Certificado</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Unidad operativa">Programa genético</td>
+                            <td data-label="Capacidad">18 000 dosis / año</td>
+                            <td data-label="Estándar">EPDs verificados</td>
+                            <td data-label="Certificación">OMSA</td>
+                            <td data-label="Estado"><span class="badge badge-blue">Certificado</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Unidad operativa">Exportación</td>
+                            <td data-label="Capacidad">12 mercados</td>
+                            <td data-label="Estándar">Incoterms 2020</td>
+                            <td data-label="Certificación">SENASA · SUNAT</td>
+                            <td data-label="Estado"><span class="badge badge-amber">Activo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <div class="diag-bottom"></div>
 </section>
 
 <!-- ═══════════════════════════════════ GENÉTICA ═══════════════════════════════════ -->
-<section id="genetica" class="s-genetics">
-    <div class="sec-num">03</div>
+<section class="section" id="genetica">
     <div class="wrap">
-        <div class="gen-layout">
-            <div class="gen-left rv" style="--d:0s">
-                <div class="sec-label">Biotecnología Pecuaria</div>
-                <h2 class="sec-title">Genética &<br><span class="text-ac">Reproducción</span></h2>
-                <p class="gen-body">Programa de mejoramiento genético de vanguardia para producción de pie de cría, embriones y material seminal certificado de las mejores razas del mundo.</p>
-                <div class="gen-highlights">
-                    <div class="ghl">
-                        <div class="ghl-dot"></div>
+        <div class="gen-grid">
+            <div class="gen-copy">
+                <span class="eyebrow"><span class="eyebrow-dot"></span>03 — Biotecnología pecuaria</span>
+                <h2 class="h2">Genética &amp;&nbsp;<span class="grad-text">reproducción</span></h2>
+                <p class="lead">
+                    Programa de mejoramiento genético de vanguardia para producción de pie de cría,
+                    embriones y material seminal certificado de las mejores razas del mundo.
+                </p>
+
+                <figure class="gen-figure">
+                    <img src="assets/img/opt/genetica-reproduccion-800.webp"
+                         srcset="assets/img/opt/genetica-reproduccion-800.webp 800w, assets/img/opt/genetica-reproduccion-1600.webp 1600w"
+                         sizes="(max-width: 900px) 100vw, 44vw"
+                         alt="Laboratorio de genética y reproducción Sumak" width="800" height="1071" loading="lazy" decoding="async">
+                </figure>
+
+                <ul class="highlight-list">
+                    <li class="highlight">
+                        <span class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l3.5-4 3 2.5L20 7"/></svg>
+                        </span>
                         <div>
-                            <h4>Catálogo Internacional</h4>
+                            <h4>Catálogo internacional</h4>
                             <p>Toros de las principales razas carniceras y lecheras del mundo, con EPDs verificados y origen documentado.</p>
                         </div>
-                    </div>
-                    <div class="ghl">
-                        <div class="ghl-dot"></div>
+                    </li>
+                    <li class="highlight">
+                        <span class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M12 3 4 7v6c0 4.4 3.4 7.4 8 8 4.6-.6 8-3.6 8-8V7l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </span>
                         <div>
-                            <h4>Trazabilidad Digital</h4>
+                            <h4>Trazabilidad digital</h4>
                             <p>Sistema digital de trazabilidad desde el origen genético hasta el producto final en el mercado.</p>
                         </div>
-                    </div>
-                    <div class="ghl">
-                        <div class="ghl-dot"></div>
+                    </li>
+                    <li class="highlight">
+                        <span class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M9 3h6v4H9zM12 7v5M7 21h10a2 2 0 0 0 2-2v-5H5v5a2 2 0 0 0 2 2z"/></svg>
+                        </span>
                         <div>
-                            <h4>Certificación Sanitaria</h4>
+                            <h4>Certificación sanitaria</h4>
                             <p>Todo el material genético cumple con protocolos sanitarios nacionales e internacionales vigentes.</p>
                         </div>
-                    </div>
-                </div>
-                <div class="gen-section-img">
-                    <img src="assets/img/Gen%C3%A9tica%20y%20Reproducci%C3%B3n.jpeg" alt="Genética y Reproducción Sumak" loading="lazy">
-                </div>
+                    </li>
+                </ul>
             </div>
-            <div class="gen-right">
-                <div class="timeline">
-                    <div class="tl-spine"></div>
-                    <div class="tl-step rv" style="--d:.1s">
-                        <div class="tls-dot">
-                            <span>01</span>
-                        </div>
-                        <div class="tls-body">
-                            <h4>Selección Genética</h4>
+
+            <div class="gen-steps card">
+                <h3 class="steps-title">Proceso reproductivo</h3>
+                <ol class="step-list">
+                    <li class="step">
+                        <span class="step-num">01</span>
+                        <div>
+                            <h4>Selección genética</h4>
                             <p>Evaluación y selección de reproductores de élite con índices genéticos superiores para las características productivas clave.</p>
                         </div>
-                    </div>
-                    <div class="tl-step rv" style="--d:.2s">
-                        <div class="tls-dot">
-                            <span>02</span>
-                        </div>
-                        <div class="tls-body">
-                            <h4>Pajillas Certificadas</h4>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">02</span>
+                        <div>
+                            <h4>Pajillas certificadas</h4>
                             <p>Semen congelado de toros probados con certificación sanitaria internacional. Importación directa de los mejores centros de IA del mundo.</p>
                         </div>
-                    </div>
-                    <div class="tl-step rv" style="--d:.3s">
-                        <div class="tls-dot">
-                            <span>03</span>
-                        </div>
-                        <div class="tls-body">
-                            <h4>Transferencia Embrionaria</h4>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">03</span>
+                        <div>
+                            <h4>Transferencia embrionaria</h4>
                             <p>Programa de TE con donantes de alto valor genético. Embriones frescos y vitrificados disponibles para exportación.</p>
                         </div>
-                    </div>
-                    <div class="tl-step rv" style="--d:.4s">
-                        <div class="tls-dot">
-                            <span>04</span>
-                        </div>
-                        <div class="tls-body">
-                            <h4>Pie de Cría Certificado</h4>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">04</span>
+                        <div>
+                            <h4>Pie de cría certificado</h4>
                             <p>Venta de reproductores machos y hembras con pedigree, pruebas de desempeño y garantía genética documentada.</p>
                         </div>
-                    </div>
-                    <div class="tl-step rv" style="--d:.5s">
-                        <div class="tls-dot">
-                            <span>05</span>
-                        </div>
-                        <div class="tls-body">
-                            <h4>Mejoramiento Continuo</h4>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">05</span>
+                        <div>
+                            <h4>Mejoramiento continuo</h4>
                             <p>Evaluaciones genómicas y pruebas de progenie para selección constante de los mejores padres del hato reproductivo Sumak.</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════ EXPORTACIÓN ═══════════════════════════════════ -->
-<section id="exportacion" class="s-export">
-    <div class="sec-num">04</div>
-    <div class="diag-top"></div>
+<section class="section section-alt" id="exportacion">
     <div class="wrap">
-        <div class="sec-label" style="margin-bottom:0.5rem">Comercio Internacional</div>
-        <h2 class="sec-title" style="margin-bottom:3rem">Exportación &<br><span class="text-ac">Importación</span></h2>
-        <div class="export-layout">
-            <!-- Animated map visual -->
-            <div class="exp-map rv" style="--d:0s">
-                <div class="emap-rings">
-                    <img class="emap-bg-img" src="assets/img/Imagen%20de%20Fondo%20del%20Mapa.jpeg" alt="Mapa Global" loading="lazy">
-                    <div class="emr emr-1"></div>
-                    <div class="emr emr-2"></div>
-                    <div class="emr emr-3"></div>
-                </div>
-                <div class="emap-hub">
-                    <div class="eh-label">PERÚ</div>
-                    <div class="eh-sub">HUB SUMAK</div>
-                </div>
-                <div class="emap-nodes">
-                    <div class="en-dot" style="--tx:55%; --ty:8%"><span>EE.UU.</span></div>
-                    <div class="en-dot" style="--tx:80%; --ty:25%"><span>Europa</span></div>
-                    <div class="en-dot" style="--tx:10%; --ty:20%"><span>Asia</span></div>
-                    <div class="en-dot" style="--tx:15%; --ty:72%"><span>Oceanía</span></div>
-                    <div class="en-dot" style="--tx:65%; --ty:75%"><span>Brasil</span></div>
-                    <div class="en-dot" style="--tx:35%; --ty:85%"><span>Chile</span></div>
-                </div>
-                <div class="emap-label">Red de Comercio Global Sumak</div>
+        <div class="section-head">
+            <div>
+                <span class="eyebrow"><span class="eyebrow-dot"></span>04 — Comercio internacional</span>
+                <h2 class="h2">Exportación &amp;&nbsp;<span class="grad-text">importación</span></h2>
             </div>
-            <!-- Two divisions -->
-            <div class="exp-divisions">
-                <div class="exp-div rv" style="--d:.15s">
-                    <img class="exp-div-bg" src="assets/img/Divisi%C3%B3n%20Exportaci%C3%B3n.jpeg" alt="División Exportación" loading="lazy">
-                    <div class="ed-head">
-                        <div class="ed-arrow">↗</div>
-                        <h3>División Exportación</h3>
+            <p class="section-lead">
+                Operamos dos divisiones complementarias que conectan la producción peruana con los
+                mercados internacionales y traen insumos estratégicos al sector local.
+            </p>
+        </div>
+
+        <div class="export-grid">
+            <figure class="map-card">
+                <img src="assets/img/opt/mapa-800.webp"
+                     srcset="assets/img/opt/mapa-800.webp 800w, assets/img/opt/mapa-1600.webp 1600w"
+                     sizes="(max-width: 900px) 100vw, 40vw"
+                     alt="Red de comercio global Sumak" width="800" height="457" loading="lazy" decoding="async">
+                <figcaption class="map-overlay">
+                    <div class="map-hub">
+                        <span class="hub-dot"></span>
+                        <div>
+                            <strong>Perú</strong>
+                            <span>Hub Sumak</span>
+                        </div>
                     </div>
+                    <ul class="map-markets">
+                        <li>EE. UU.</li>
+                        <li>Europa</li>
+                        <li>Asia</li>
+                        <li>Brasil</li>
+                        <li>Chile</li>
+                        <li>Oceanía</li>
+                    </ul>
+                </figcaption>
+            </figure>
+
+            <div class="export-cards">
+                <article class="card export-card">
+                    <div class="export-head">
+                        <span class="export-icon export-icon-out">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                        </span>
+                        <span class="badge badge-green">Exportación</span>
+                    </div>
+                    <h3>División exportación</h3>
                     <p>Envío de cortes seleccionados, carnes empacadas al vacío y genética pecuaria hacia mercados internacionales bajo protocolos fitosanitarios rigurosos e Incoterms 2020.</p>
-                    <ul class="ed-ul">
+                    <ul class="check-list">
                         <li>Cortes cárnicos premium empacados al vacío</li>
                         <li>Genética: pajillas certificadas y embriones</li>
                         <li>Subproductos pecuarios procesados</li>
                         <li>Cadena de frío garantizada hasta destino</li>
                     </ul>
-                </div>
-                <div class="exp-div exp-div-import rv" style="--d:.3s">
-                    <img class="exp-div-bg" src="assets/img/Divisi%C3%B3n%20Importaci%C3%B3n.jpeg" alt="División Importación" loading="lazy">
-                    <div class="ed-head">
-                        <div class="ed-arrow import">↙</div>
-                        <h3>División Importación</h3>
+                </article>
+
+                <article class="card export-card">
+                    <div class="export-head">
+                        <span class="export-icon export-icon-in">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M17 7 7 17M15 17H7V9"/></svg>
+                        </span>
+                        <span class="badge badge-blue">Importación</span>
                     </div>
+                    <h3>División importación</h3>
                     <p>Introducción al mercado peruano de insumos estratégicos de alta calidad para maximizar la productividad del sector pecuario nacional.</p>
-                    <ul class="ed-ul">
+                    <ul class="check-list">
                         <li>Núcleos nutricionales y premezclas vitamínicas</li>
                         <li>Aditivos biológicos de alta conversión</li>
                         <li>Equipamiento tecnológico para granjas</li>
                         <li>Genética importada de origen certificado</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="diag-bottom"></div>
-</section>
-
-<!-- ═══════════════════════════════════ ESTADÍSTICAS ═══════════════════════════════════ -->
-<section id="stats" class="s-stats">
-    <div class="sec-num">05</div>
-    <div class="wrap">
-        <div class="stats-row">
-            <div class="stat-blk rv" style="--d:0s">
-                <div class="stb-main">
-                    <span class="counter" data-target="500">0</span>
-                    <span class="stb-unit">+</span>
-                </div>
-                <div class="stb-label">Clientes B2B<br>Activos</div>
-                <div class="stb-track"><div class="stb-fill" style="--pct:85%"></div></div>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-blk rv" style="--d:.1s">
-                <div class="stb-main">
-                    <span class="counter" data-target="12">0</span>
-                    <span class="stb-unit"></span>
-                </div>
-                <div class="stb-label">Países de<br>Exportación</div>
-                <div class="stb-track"><div class="stb-fill" style="--pct:60%"></div></div>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-blk rv" style="--d:.2s">
-                <div class="stb-main">
-                    <span class="counter" data-target="10000">0</span>
-                    <span class="stb-unit">+</span>
-                </div>
-                <div class="stb-label">Toneladas<br>Producidas / Año</div>
-                <div class="stb-track"><div class="stb-fill" style="--pct:92%"></div></div>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat-blk rv" style="--d:.3s">
-                <div class="stb-main">
-                    <span class="counter" data-target="25">0</span>
-                    <span class="stb-unit">+</span>
-                </div>
-                <div class="stb-label">Años de<br>Trayectoria</div>
-                <div class="stb-track"><div class="stb-fill" style="--pct:75%"></div></div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════ CERTIFICACIONES ═══════════════════════════════════ -->
-<section id="certificaciones" class="s-cert">
-    <div class="sec-num">06</div>
-    <div class="diag-top"></div>
+<section class="section" id="certificaciones">
     <div class="wrap">
-        <div class="cert-header">
-            <div class="sec-label">Compliance & Regulatorio</div>
-            <h2 class="sec-title">Certificaciones<br><span class="text-ac">Internacionales</span></h2>
+        <div class="section-head">
+            <div>
+                <span class="eyebrow"><span class="eyebrow-dot"></span>05 — Compliance &amp; regulatorio</span>
+                <h2 class="h2">Certificaciones <span class="grad-text">internacionales</span></h2>
+            </div>
+            <p class="section-lead">
+                Operamos bajo auditorías continuas y estándares verificables en cada eslabón de la
+                cadena productiva.
+            </p>
         </div>
-        <!-- Marquee ticker -->
-        <div class="cert-ticker-wrap">
-            <div class="cert-ticker" id="certTicker">
-                <span>◆ SENASA CERTIFICADO</span>
-                <span>◆ DIGESA HABILITADO</span>
-                <span>◆ OMSA REGISTRADO</span>
-                <span>◆ BPP CERTIFICADO</span>
-                <span>◆ SUNAT ADUANAS</span>
-                <span>◆ INCOTERMS 2020</span>
-                <span>◆ INDECOPI REGISTRADO</span>
-                <span>◆ LEY 29733 COMPLIANT</span>
-                <span>◆ SENASA CERTIFICADO</span>
-                <span>◆ DIGESA HABILITADO</span>
-                <span>◆ OMSA REGISTRADO</span>
-                <span>◆ BPP CERTIFICADO</span>
-                <span>◆ SUNAT ADUANAS</span>
-                <span>◆ INCOTERMS 2020</span>
-            </div>
-        </div>
-        <!-- Cert cards: horizontal layout, not a typical grid -->
-        <div class="cert-list">
-            <div class="cert-item rv" style="--d:0s">
-                <div class="ci-badge">
-                    <div class="ci-glow"></div>
-                    <span>SENASA</span>
+
+        <div class="cert-grid">
+            <article class="card cert-card">
+                <div class="cert-top">
+                    <span class="badge badge-green">SENASA</span>
+                    <span class="cert-status"><span class="status-dot"></span>Vigente</span>
                 </div>
-                <div class="ci-body">
-                    <h4>Servicio Nacional de Sanidad Agraria</h4>
-                    <p>Certificación de camales, establos, transporte y movimiento de ganado a nivel nacional.</p>
+                <h3>Servicio Nacional de Sanidad Agraria</h3>
+                <p>Certificación de camales, establos, transporte y movimiento de ganado a nivel nacional.</p>
+            </article>
+
+            <article class="card cert-card">
+                <div class="cert-top">
+                    <span class="badge badge-blue">DIGESA</span>
+                    <span class="cert-status"><span class="status-dot"></span>Vigente</span>
                 </div>
-                <div class="ci-status"><span class="ci-dot"></span>Vigente</div>
-            </div>
-            <div class="cert-item rv" style="--d:.1s">
-                <div class="ci-badge">
-                    <div class="ci-glow"></div>
-                    <span>DIGESA</span>
+                <h3>Dirección General de Salud Ambiental</h3>
+                <p>Habilitación para procesamiento y comercialización de productos cárnicos para consumo humano.</p>
+            </article>
+
+            <article class="card cert-card">
+                <div class="cert-top">
+                    <span class="badge badge-violet">OMSA</span>
+                    <span class="cert-status"><span class="status-dot"></span>Internacional</span>
                 </div>
-                <div class="ci-body">
-                    <h4>Dirección General de Salud Ambiental</h4>
-                    <p>Habilitación para procesamiento y comercialización de productos cárnicos para consumo humano.</p>
+                <h3>Organización Mundial de Sanidad Animal</h3>
+                <p>Cumplimiento de estándares internacionales de sanidad animal para comercio exterior pecuario.</p>
+            </article>
+
+            <article class="card cert-card">
+                <div class="cert-top">
+                    <span class="badge badge-amber">BPP</span>
+                    <span class="cert-status"><span class="status-dot"></span>Vigente</span>
                 </div>
-                <div class="ci-status"><span class="ci-dot"></span>Vigente</div>
-            </div>
-            <div class="cert-item rv" style="--d:.2s">
-                <div class="ci-badge">
-                    <div class="ci-glow"></div>
-                    <span>OMSA</span>
-                </div>
-                <div class="ci-body">
-                    <h4>Organización Mundial de Sanidad Animal</h4>
-                    <p>Cumplimiento de estándares internacionales de sanidad animal para comercio exterior pecuario.</p>
-                </div>
-                <div class="ci-status"><span class="ci-dot"></span>Internacional</div>
-            </div>
-            <div class="cert-item rv" style="--d:.3s">
-                <div class="ci-badge">
-                    <div class="ci-glow"></div>
-                    <span>BPP</span>
-                </div>
-                <div class="ci-body">
-                    <h4>Buenas Prácticas Pecuarias</h4>
-                    <p>Protocolo integral de manejo responsable, bienestar animal y sostenibilidad operativa certificada.</p>
-                </div>
-                <div class="ci-status"><span class="ci-dot"></span>Vigente</div>
-            </div>
+                <h3>Buenas Prácticas Pecuarias</h3>
+                <p>Protocolo integral de manejo responsable, bienestar animal y sostenibilidad operativa certificada.</p>
+            </article>
         </div>
     </div>
-    <div class="diag-bottom"></div>
 </section>
 
 <!-- ═══════════════════════════════════ GALERÍA ═══════════════════════════════════ -->
-<section id="galeria" class="s-gallery">
-    <div class="sec-num">07</div>
+<section class="section section-alt" id="galeria">
     <div class="wrap">
-        <div class="gal-header">
-            <div class="sec-label">Instalaciones & Operaciones</div>
-            <h2 class="sec-title">Galería<br><span class="text-ac">Corporativa</span></h2>
+        <div class="section-head">
+            <div>
+                <span class="eyebrow"><span class="eyebrow-dot"></span>06 — Instalaciones</span>
+                <h2 class="h2">Galería <span class="grad-text">corporativa</span></h2>
+            </div>
+            <p class="section-lead">
+                Un recorrido por las operaciones, laboratorios y plantas que sostienen la cadena
+                productiva Sumak.
+            </p>
         </div>
-        <div class="gal-grid">
-            <div class="gi gi-a rv" style="--d:0s">
-                <div class="gi-bg">
-                    <img src="assets/img/Ganader%C3%ADa.jpeg" alt="Hatos Ganaderos" loading="lazy">
-                </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Ganadería</span>
-                    <span class="gi-title">Hatos Ganaderos</span>
-                </div>
+
+        <div class="gallery">
+            <figure class="gal-item gal-lg">
+                <img src="assets/img/opt/ganaderia-800.webp"
+                     srcset="assets/img/opt/ganaderia-800.webp 800w, assets/img/opt/ganaderia-1600.webp 1600w"
+                     sizes="(max-width: 900px) 100vw, 50vw"
+                     alt="Hatos ganaderos Sumak" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Ganadería</span><span class="gal-title">Hatos ganaderos</span></figcaption>
+            </figure>
+
+            <figure class="gal-item">
+                <img src="assets/img/opt/galeria-bioseguridad-800.webp"
+                     srcset="assets/img/opt/galeria-bioseguridad-800.webp 800w, assets/img/opt/galeria-bioseguridad-1600.webp 1600w"
+                     sizes="(max-width: 900px) 50vw, 25vw"
+                     alt="Instalaciones de bioseguridad" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Bioseguridad</span><span class="gal-title">Instalaciones</span></figcaption>
+            </figure>
+
+            <figure class="gal-item">
+                <img src="assets/img/opt/galeria-genetica-800.webp"
+                     srcset="assets/img/opt/galeria-genetica-800.webp 800w, assets/img/opt/galeria-genetica-1600.webp 1600w"
+                     sizes="(max-width: 900px) 50vw, 25vw"
+                     alt="Laboratorio de genética" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Genética</span><span class="gal-title">Laboratorio</span></figcaption>
+            </figure>
+
+            <figure class="gal-item">
+                <img src="assets/img/opt/galeria-exportacion-800.webp"
+                     srcset="assets/img/opt/galeria-exportacion-800.webp 800w, assets/img/opt/galeria-exportacion-1600.webp 1600w"
+                     sizes="(max-width: 900px) 100vw, 50vw"
+                     alt="Logística de exportación" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Exportación</span><span class="gal-title">Logística internacional</span></figcaption>
+            </figure>
+
+            <figure class="gal-item">
+                <img src="assets/img/opt/galeria-procesamiento-800.webp"
+                     srcset="assets/img/opt/galeria-procesamiento-800.webp 800w, assets/img/opt/galeria-procesamiento-1600.webp 1600w"
+                     sizes="(max-width: 900px) 50vw, 25vw"
+                     alt="Planta de procesamiento" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Procesamiento</span><span class="gal-title">Planta de beneficio</span></figcaption>
+            </figure>
+
+            <figure class="gal-item">
+                <img src="assets/img/opt/galeria-campo-800.webp"
+                     srcset="assets/img/opt/galeria-campo-800.webp 800w, assets/img/opt/galeria-campo-1600.webp 1600w"
+                     sizes="(max-width: 900px) 50vw, 25vw"
+                     alt="Pastos y forrajes" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption><span class="badge badge-glass">Campo</span><span class="gal-title">Pastos y forrajes</span></figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════ B2B ═══════════════════════════════════ -->
+<section class="section" id="b2b">
+    <div class="wrap">
+        <div class="b2b-grid">
+            <div class="b2b-copy">
+                <span class="eyebrow"><span class="eyebrow-dot"></span>07 — Canal corporativo</span>
+                <h2 class="h2">Acceso <span class="grad-text">B2B</span></h2>
+                <p class="lead">
+                    ¿Es usted un comprador mayorista, una planta industrial de procesamiento o una
+                    empresa importadora internacional buscando el mejor origen pecuario?
+                </p>
+
+                <ul class="target-list">
+                    <li>Compradores mayoristas de volumen</li>
+                    <li>Plantas industriales de procesamiento</li>
+                    <li>Importadores internacionales</li>
+                    <li>Cadenas HORECA de alto volumen</li>
+                </ul>
+
+                <ul class="guarantee-list">
+                    <li><span class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Volumen garantizado</li>
+                    <li><span class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Consistencia y trazabilidad</li>
+                    <li><span class="check-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>Bioseguridad certificada</li>
+                </ul>
             </div>
-            <div class="gi gi-b rv" style="--d:.1s">
-                <div class="gi-bg">
-                    <img src="assets/img/Bioseguridad%20gi-c.jpeg" alt="Instalaciones Bioseguridad" loading="lazy">
+
+            <div class="card form-card">
+                <div class="form-head">
+                    <h3>Cotización corporativa</h3>
+                    <p>Nuestro equipo le contactará en menos de 24 horas.</p>
                 </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Bioseguridad</span>
-                    <span class="gi-title">Instalaciones</span>
-                </div>
-            </div>
-            <div class="gi gi-c rv" style="--d:.2s">
-                <div class="gi-bg">
-                    <img src="assets/img/gi-c%20(Gen%C3%A9tica).jpeg" alt="Laboratorio Genética" loading="lazy">
-                </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Genética</span>
-                    <span class="gi-title">Laboratorio</span>
-                </div>
-            </div>
-            <div class="gi gi-d rv" style="--d:.3s">
-                <div class="gi-bg">
-                    <img src="assets/img/gi-d%20(Exportaci%C3%B3n).jpeg" alt="Logística Exportación" loading="lazy">
-                </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Exportación</span>
-                    <span class="gi-title">Logística Internacional</span>
-                </div>
-            </div>
-            <div class="gi gi-e rv" style="--d:.4s">
-                <div class="gi-bg">
-                    <img src="assets/img/gi-e%20(Procesamiento).jpeg" alt="Planta de Procesamiento" loading="lazy">
-                </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Procesamiento</span>
-                    <span class="gi-title">Planta de Beneficio</span>
-                </div>
-            </div>
-            <div class="gi gi-f rv" style="--d:.5s">
-                <div class="gi-bg">
-                    <img src="assets/img/gi-f%20(Campo).jpeg" alt="Pastos y Forrajes" loading="lazy">
-                </div>
-                <div class="gi-info">
-                    <span class="gi-cat">Campo</span>
-                    <span class="gi-title">Pastos y Forrajes</span>
-                </div>
+
+                <form id="b2bForm" class="form" novalidate>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="empresa">Empresa / razón social *</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required autocomplete="organization">
+                        </div>
+                        <div class="field">
+                            <label for="contacto">Nombre de contacto *</label>
+                            <input type="text" id="contacto" name="contacto" placeholder="Su nombre completo" required autocomplete="name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required autocomplete="email">
+                        </div>
+                        <div class="field">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="producto">Tipo de producto *</label>
+                        <select id="producto" name="producto" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option>Carne vacuna — cortes premium</option>
+                            <option>Carne porcina</option>
+                            <option>Carne ovina</option>
+                            <option>Genética — pajillas y embriones</option>
+                            <option>Pie de cría certificado</option>
+                            <option>Insumos pecuarios (importación)</option>
+                            <option>Otro — especificar en mensaje</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="mensaje">Requerimiento / volumen estimado</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa su requerimiento, volumen aproximado, frecuencia de compra y mercado de destino..."></textarea>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox" id="privacidad" name="privacidad" required>
+                        <span>Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos conforme a la Ley N.º 29733.</span>
+                    </label>
+
+                    <button type="submit" class="btn btn-block">
+                        <span>Enviar solicitud corporativa</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════ MÓDULO B2B ═══════════════════════════════════ -->
-<section id="b2b" class="s-b2b">
-    <div class="sec-num">08</div>
-    <div class="diag-top"></div>
-    <div class="wrap">
-        <div class="b2b-layout">
-            <div class="b2b-left rv" style="--d:0s">
-                <div class="sec-label">Canal Corporativo</div>
-                <h2 class="sec-title">Acceso<br><span class="text-ac">B2B</span></h2>
-                <p class="b2b-body">¿Es usted un comprador mayorista, una planta industrial de procesamiento o una empresa importadora internacional buscando el mejor origen pecuario?</p>
-                <div class="b2b-targets">
-                    <div class="bt-item"><div class="bt-mk"></div><span>Compradores mayoristas de volumen</span></div>
-                    <div class="bt-item"><div class="bt-mk"></div><span>Plantas industriales de procesamiento</span></div>
-                    <div class="bt-item"><div class="bt-mk"></div><span>Importadores internacionales</span></div>
-                    <div class="bt-item"><div class="bt-mk"></div><span>Cadenas HORECA de alto volumen</span></div>
-                </div>
-                <div class="b2b-guarantees">
-                    <div class="bg-item"><span class="bg-check">✓</span>Volumen garantizado</div>
-                    <div class="bg-item"><span class="bg-check">✓</span>Consistencia y trazabilidad</div>
-                    <div class="bg-item"><span class="bg-check">✓</span>Bioseguridad certificada</div>
-                </div>
-            </div>
-            <div class="b2b-right rv" style="--d:.2s">
-                <div class="b2b-card">
-                    <div class="bcard-title">
-                        <span class="bct-dot"></span>
-                        <h3>Cotización Corporativa</h3>
-                    </div>
-                    <p class="bcard-sub">Nuestro equipo le contactará en menos de 24 horas.</p>
-                    <form id="b2bForm" class="bform">
-                        <div class="bform-row">
-                            <div class="bfg">
-                                <label>Empresa / Razón Social *</label>
-                                <input type="text" name="empresa" placeholder="Nombre de la empresa" required>
-                            </div>
-                            <div class="bfg">
-                                <label>Nombre de Contacto *</label>
-                                <input type="text" name="contacto" placeholder="Su nombre completo" required>
-                            </div>
-                        </div>
-                        <div class="bform-row">
-                            <div class="bfg">
-                                <label>Correo Electrónico *</label>
-                                <input type="email" name="email" placeholder="correo@empresa.com" required>
-                            </div>
-                            <div class="bfg">
-                                <label>Teléfono / WhatsApp</label>
-                                <input type="tel" name="telefono" placeholder="+51 999 999 999">
-                            </div>
-                        </div>
-                        <div class="bfg">
-                            <label>Tipo de Producto *</label>
-                            <select name="producto" required>
-                                <option value="">Seleccione una categoría</option>
-                                <option>Carne Vacuna — Cortes Premium</option>
-                                <option>Carne Porcina</option>
-                                <option>Carne Ovina</option>
-                                <option>Genética — Pajillas y Embriones</option>
-                                <option>Pie de Cría Certificado</option>
-                                <option>Insumos Pecuarios (Importación)</option>
-                                <option>Otro — Especificar en mensaje</option>
-                            </select>
-                        </div>
-                        <div class="bfg">
-                            <label>Requerimiento / Volumen Estimado</label>
-                            <textarea name="mensaje" rows="4" placeholder="Describa su requerimiento, volumen aproximado, frecuencia de compra y mercado de destino..."></textarea>
-                        </div>
-                        <div class="bform-check">
-                            <input type="checkbox" id="privCheck" name="privacidad" required>
-                            <label for="privCheck">Acepto la <a href="#">Política de Privacidad</a> y el tratamiento de mis datos conforme a la Ley N° 29733.</label>
-                        </div>
-                        <button type="submit" class="bform-submit">
-                            <span>Enviar Solicitud Corporativa</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="diag-bottom"></div>
-</section>
+</main>
 
 <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
-<footer id="footer">
-    <div class="footer-glow"></div>
+<footer class="footer">
     <div class="wrap">
-        <div class="footer-top">
-            <div class="ft-brand">
-                <div class="ftb-logo">
-                    <div class="ftb-mark"><img src="SUMAK.png" alt="Sumak Logo" class="ftb-logo-img"></div>
-                    <div>
-                        <div class="ftb-name">SUMAK</div>
-                        <div class="ftb-sub">AGROPECUARIA S.A.C.</div>
-                    </div>
-                </div>
-                <p class="ftb-body">Excelencia pecuaria global desde Perú. Crianza, genética, procesamiento y exportación bajo los más altos estándares de bioseguridad internacional.</p>
-                <div class="ftb-social">
-                    <a href="https://www.facebook.com/profile.php?id=61590144242985" target="_blank" rel="noopener" aria-label="Facebook" class="fts-link">Fb</a>
-                    <a href="https://www.instagram.com/sumak.agropecuaria/" target="_blank" rel="noopener" aria-label="Instagram" class="fts-link">Ig</a>
-                    <a href="https://www.tiktok.com/@sumak.agropecuaria" target="_blank" rel="noopener" aria-label="TikTok" class="fts-link">Tt</a>
-                    <a href="https://www.youtube.com/@Sumak.Agropecuaria" target="_blank" rel="noopener" aria-label="YouTube" class="fts-link">Yt</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#top" aria-label="Agropecuaria Sumak — Inicio">
+                    <img src="assets/logo/sumak-logo.png" alt="Agropecuaria Sumak S.A.C." class="footer-logo" width="141" height="70" loading="lazy">
+                </a>
+                <p>Excelencia pecuaria global desde Perú. Crianza, genética, procesamiento y exportación bajo los más altos estándares de bioseguridad internacional.</p>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=61590144242985" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/somossumakagropecuaria/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@somosumakagropecuaria" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.41-4.17-1.07-.89-.47-1.68-1.07-2.36-1.77-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@somosSumakAgropecuaria" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
                 </div>
             </div>
-            <div class="ft-col">
+
+            <nav class="footer-col" aria-label="Operaciones">
                 <h4>Operaciones</h4>
                 <ul>
-                    <li><a href="#produccion">Producción Vacuna</a></li>
-                    <li><a href="#produccion">Producción Porcina</a></li>
-                    <li><a href="#produccion">Producción Ovina</a></li>
-                    <li><a href="#genetica">Genética y Reproducción</a></li>
+                    <li><a href="#produccion">Producción vacuna</a></li>
+                    <li><a href="#produccion">Producción porcina</a></li>
+                    <li><a href="#produccion">Producción ovina</a></li>
+                    <li><a href="#genetica">Genética y reproducción</a></li>
                     <li><a href="#produccion">Bioseguridad</a></li>
                 </ul>
-            </div>
-            <div class="ft-col">
+            </nav>
+
+            <nav class="footer-col" aria-label="Comercio">
                 <h4>Comercio</h4>
                 <ul>
-                    <li><a href="#exportacion">Exportación Global</a></li>
-                    <li><a href="#exportacion">Importación Estratégica</a></li>
+                    <li><a href="#exportacion">Exportación global</a></li>
+                    <li><a href="#exportacion">Importación estratégica</a></li>
                     <li><a href="#b2b">Canal B2B</a></li>
                     <li><a href="#certificaciones">Certificaciones</a></li>
-                    <li><a href="#">Canal HORECA</a></li>
+                    <li><a href="#produccion">Canal HORECA</a></li>
                 </ul>
-            </div>
-            <div class="ft-col">
+            </nav>
+
+            <div class="footer-col">
                 <h4>Contacto</h4>
-                <ul class="ft-contact">
-                    <li><span>Email</span><a href="mailto:info@agrosumak.com">info@agrosumak.com</a></li>
-                    <li><span>Lima</span><em>Av. República de Chile 324</em></li>
-                    <li><span>Chiclayo</span><em>Lapoint 1221</em></li>
+                <ul class="contact-list">
+                    <li>
+                        <span>Email</span>
+                        <a href="mailto:info@agrosumak.com">info@agrosumak.com</a>
+                    </li>
+                    <li>
+                        <span>Lima</span>
+                        <em>Av. República de Chile 324</em>
+                    </li>
+                    <li>
+                        <span>Chiclayo</span>
+                        <em>Lapoint 1221</em>
+                    </li>
                 </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <div class="fb-left">
-                <span>© 2026 Agropecuaria Sumak S.A.C. — Todos los derechos reservados.</span>
-                <span>RUC: [Número de RUC]</span>
-            </div>
-            <div class="fb-right">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos de Uso</a>
-                <a href="#">Libro de Reclamaciones</a>
+            <span>© 2026 Agropecuaria Sumak S.A.C. — Todos los derechos reservados.</span>
+            <div class="footer-legal">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Libro de reclamaciones</a>
             </div>
         </div>
     </div>
 </footer>
 
 <!-- ═══ MODAL DE ÉXITO ═══ -->
-<div id="successModal" class="modal-overlay" style="display:none">
+<div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
     <div class="modal-box">
-        <div class="modal-check">✓</div>
-        <h3>Solicitud Enviada</h3>
+        <span class="modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+        </span>
+        <h3 id="modalTitle">Solicitud enviada</h3>
         <p>Hemos recibido su cotización corporativa. Nuestro equipo le contactará en menos de 24 horas hábiles.</p>
-        <button onclick="document.getElementById('successModal').style.display='none'" class="modal-close-btn">Cerrar</button>
+        <button class="btn" id="modalClose">Cerrar</button>
     </div>
 </div>
 
-<script src="app.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="app.js?v=2"></script>
+<script src="motion.js?v=2"></script>
 </body>
 </html>
