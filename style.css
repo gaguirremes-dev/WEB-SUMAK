@@ -932,11 +932,45 @@ figure { margin: 0; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem; flex-wrap: wrap;
   margin-top: 2.5rem; padding-top: 1.4rem;
+  /* Reserva el ancho del botón flotante de WhatsApp (56px + márgenes) */
+  padding-right: 4.75rem;
   border-top: 1px solid var(--line);
   font-size: .77rem; color: var(--muted);
 }
 .footer-legal { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 .footer-legal a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════════════════════════════
+   WHATSAPP FLOTANTE
+   z-index 90: por debajo del navbar (100), del menú móvil (99)
+   y del modal (200), así nunca los tapa ni bloquea el cierre.
+   ═══════════════════════════════════════════════════════════════ */
+.wa-fab {
+  position: fixed;
+  right: max(1.15rem, env(safe-area-inset-right));
+  bottom: max(1.15rem, env(safe-area-inset-bottom));
+  z-index: 90;
+  display: grid; place-items: center;
+  width: 56px; height: 56px;
+  border-radius: var(--pill);
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(27,20,36,.18), 0 10px 24px rgba(18,140,126,.30);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.wa-fab svg { width: 30px; height: 30px; display: block; }
+.wa-fab:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 3px 8px rgba(27,20,36,.20), 0 14px 30px rgba(18,140,126,.38);
+}
+.wa-fab:active { transform: translateY(0) scale(.97); }
+.wa-fab:focus-visible { outline: 3px solid rgba(37,211,102,.55); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .wa-fab { width: 52px; height: 52px; }
+  .wa-fab svg { width: 28px; height: 28px; }
+}
 
 /* ═══════════════════════════════════════════════════════════════
    MODAL
@@ -1076,6 +1110,8 @@ figure { margin: 0; }
 
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  /* Aire extra para que el botón flotante no tape los enlaces legales */
+  .footer { padding-bottom: 4.75rem; }
 
   .table-head { padding: 1rem 1.1rem; }
   .tech-table thead th { padding: .8rem 1.1rem; }
